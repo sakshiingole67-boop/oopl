@@ -1,0 +1,30 @@
+interface Area {
+    void calculateArea(int radius);
+}
+
+interface Perimeter {
+    void calculatePerimeter(int radius);
+}
+
+class interfacedemo implements Area, Perimeter {
+
+    public void calculateArea(int radius) {
+        double area = 3.14 * radius * radius;
+        System.out.println("Area of circle: " + area);
+    }
+
+    public void calculatePerimeter(int radius) {
+        double perimeter = 2 * 3.14 * radius;
+        System.out.println("Perimeter of circle: " + perimeter);
+    }
+
+    public static void main(String[] args) {
+
+        Area a = new interfacedemo();
+        Perimeter p = new interfacedemo();
+
+        a.calculateArea(5);
+        p.calculatePerimeter(5);
+
+    }
+}
